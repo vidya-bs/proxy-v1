@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="online-banking-api">
+    <Description>Online Banking API</Description>
+	<FaultRules>
+	</FaultRules>
+	<DefaultFaultRule>
+            <Step>
+                <Name>SF-PostflowResponseTargetLogAggregator</Name>
+            </Step>
+    	<AlwaysEnforce>true</AlwaysEnforce>
+	</DefaultFaultRule>
+	<PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>SF-PreflowRequestTargetLogAggregator</Name>
+            </Step>
+            <Step>
+                <Name>cf-Remove-Proxy-Auth-Header</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+	<Flows>
+        <Flow name="findAllBankAccountUsingGET">
+        	<Condition>(targetOperation = &quot;findAllBankAccountUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST">
+        	<Condition>(targetOperation = &quot;addUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT">
+        	<Condition>(targetOperation = &quot;updateUsingPUT&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="depositUsingPUT">
+        	<Condition>(targetOperation = &quot;depositUsingPUT&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="withdrawUsingPUT">
+        	<Condition>(targetOperation = &quot;withdrawUsingPUT&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findBankAccountByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findBankAccountByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllBranchesUsingGET">
+        	<Condition>(targetOperation = &quot;findAllBranchesUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_1">
+        	<Condition>(targetOperation = &quot;addUsingPOST_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_1">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findBranchByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findBranchByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_1">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_2">
+        	<Condition>(targetOperation = &quot;addUsingPOST_2&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_2">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_2&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findByProjectIdUsingGET">
+        	<Condition>(targetOperation = &quot;findByProjectIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteUsingDELETE">
+        	<Condition>(targetOperation = &quot;deleteUsingDELETE&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addFromUIUsingPOST">
+        	<Condition>(targetOperation = &quot;addFromUIUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateFromUIUsingPUT">
+        	<Condition>(targetOperation = &quot;updateFromUIUsingPUT&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllUsingGET">
+        	<Condition>(targetOperation = &quot;findAllUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="createUsingPOST">
+        	<Condition>(targetOperation = &quot;createUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllOrgsUsingGET">
+        	<Condition>(targetOperation = &quot;findAllOrgsUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findOrgUsersUsingGET">
+        	<Condition>(targetOperation = &quot;findOrgUsersUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findByNameUsingGET">
+        	<Condition>(targetOperation = &quot;findByNameUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="loginUsingGET">
+        	<Condition>(targetOperation = &quot;loginUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="searchUsingGET">
+        	<Condition>(targetOperation = &quot;searchUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findOrgUserByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findOrgUserByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findOrgUsersByIdUsingPOST">
+        	<Condition>(targetOperation = &quot;findOrgUsersByIdUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateOrgUserUsingPUT">
+        	<Condition>(targetOperation = &quot;updateOrgUserUsingPUT&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="resetPasswordUsingPOST">
+        	<Condition>(targetOperation = &quot;resetPasswordUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findByIdUsingGET_1">
+        	<Condition>(targetOperation = &quot;findByIdUsingGET_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_3">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_3&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteUsingDELETE_1">
+        	<Condition>(targetOperation = &quot;deleteUsingDELETE_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findOrgUsersByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findOrgUsersByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="depositUsingPUT_1">
+        	<Condition>(targetOperation = &quot;depositUsingPUT_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllPrimaryAccountUsingGET">
+        	<Condition>(targetOperation = &quot;findAllPrimaryAccountUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_3">
+        	<Condition>(targetOperation = &quot;addUsingPOST_3&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_4">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_4&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findPrimaryAccountByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findPrimaryAccountByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_2">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_2&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="withdrawUsingPUT_1">
+        	<Condition>(targetOperation = &quot;withdrawUsingPUT_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllPrimaryTransactionUsingGET">
+        	<Condition>(targetOperation = &quot;findAllPrimaryTransactionUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_4">
+        	<Condition>(targetOperation = &quot;addUsingPOST_4&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_5">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_5&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findPrimaryTransactionByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findPrimaryTransactionByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_3">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_3&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllUsingGET_1">
+        	<Condition>(targetOperation = &quot;findAllUsingGET_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_5">
+        	<Condition>(targetOperation = &quot;addUsingPOST_5&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_6">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_6&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findByIdUsingGET_2">
+        	<Condition>(targetOperation = &quot;findByIdUsingGET_2&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteUsingDELETE_2">
+        	<Condition>(targetOperation = &quot;deleteUsingDELETE_2&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllRecepientsUsingGET">
+        	<Condition>(targetOperation = &quot;findAllRecepientsUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addRecepientUsingPOST">
+        	<Condition>(targetOperation = &quot;addRecepientUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_7">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_7&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findRecepientByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findRecepientByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_4">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_4&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllSavingsAccountUsingGET">
+        	<Condition>(targetOperation = &quot;findAllSavingsAccountUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_6">
+        	<Condition>(targetOperation = &quot;addUsingPOST_6&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_8">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_8&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findSavingsAccountByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findSavingsAccountByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_5">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_5&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllSavingsTransactionUsingGET">
+        	<Condition>(targetOperation = &quot;findAllSavingsTransactionUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_7">
+        	<Condition>(targetOperation = &quot;addUsingPOST_7&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_9">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_9&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findSavingsTransactionByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findSavingsTransactionByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_6">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_6&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findAllTransfersUsingGET">
+        	<Condition>(targetOperation = &quot;findAllTransfersUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="addUsingPOST_8">
+        	<Condition>(targetOperation = &quot;addUsingPOST_8&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="updateUsingPUT_10">
+        	<Condition>(targetOperation = &quot;updateUsingPUT_10&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="findTransfersByIdUsingGET">
+        	<Condition>(targetOperation = &quot;findTransfersByIdUsingGET&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="deleteByIdUsingDELETE_7">
+        	<Condition>(targetOperation = &quot;deleteByIdUsingDELETE_7&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="enterpriseSignUpUsingPOST">
+        	<Condition>(targetOperation = &quot;enterpriseSignUpUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="personalSignUpUsingPOST">
+        	<Condition>(targetOperation = &quot;personalSignUpUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="loginUsingGET_1">
+        	<Condition>(targetOperation = &quot;loginUsingGET_1&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+        <Flow name="teamSignUpUsingPOST">
+        	<Condition>(targetOperation = &quot;teamSignUpUsingPOST&quot;)</Condition>
+			<Request>
+			</Request>   
+			<Response>
+			</Response>
+        </Flow>
+	</Flows>
+    <PostFlow name="PostFlow">
+        <Request>
+            <Step>
+                <Name>SF-PostflowRequestTargetLogAggregator</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>SF-PostflowResponseTargetLogAggregator</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <HTTPTargetConnection>
+    	<LoadBalancer>
+            <Server name="online-banking-api">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>/v1/banking</Path>
+    </HTTPTargetConnection>
+</TargetEndpoint>
